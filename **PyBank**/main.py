@@ -16,14 +16,15 @@ greatest_decrease = ["", 9999999]
 	
 profit_loss_changes = []
 
+
 # Read Files
 with open('/Users/poonam/Desktop/Pgupte/Python-Challenges/**PyBank**/budget_data.csv') as csvfile:
     csvpath  = csv.reader(csvfile, delimiter=',')
     for row in  csvpath :
         total_months = total_months + 1
-        total_profit_loss = total_profit_loss + int(row[1])
+        total_profit_loss = total_profit_loss + int(row[total_profit_loss])
         #total_profit_loss = total_profit_loss + int(row["Profit/Losses"])
-        #print(row)
+        print(row)
 	
         # Keep track of changes
         #profit_loss_change = int(row["Profit/Losses"]) - prev_profit_loss
